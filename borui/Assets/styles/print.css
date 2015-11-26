@@ -1,0 +1,63 @@
+﻿/* 
+ * ---------------------------------------- *
+ * Name:  Print Styles                      *
+ * Version: Not Versioned                   *
+ * Author: Matt O'Neill                     *
+ * ---------------------------------------- *
+ */
+
+
+ /* legacy */
+body { background: #ffffff; padding: 20px; -webkit-print-color-adjust:exact;}
+#PrintDisclaimer { display: block;}
+#site-footer .copyright { text-align: left; }
+
+/* generic
+   ---------------------------- */
+
+#site-header > div { display: none; }
+#site-header > div.logo-wrapper { display: block }
+
+#kwm-logo {  bottom: -90px; right:15px  }
+#kwm-logo img { width: 80px; height: 94px; }
+
+#breadcrumb { margin-top: 20px; }
+
+.col.col-7,
+.col.col-5 { width: 100%; }
+.col.col-4 { width: 47%; }
+
+.section-padding { padding: 0 0 15px 0; }
+.section-padding.border-bottom { border: none; }
+
+.download-email-print,
+.careers-tout,
+.hide-print,
+.button { display: none; }
+
+
+/* articles
+   ---------------------------- */
+#main-padding .article-image-header { margin-top: 50px; }
+.banner-title { line-height: 45px; width: 80%; }
+
+/*#site-footer { display: none; }*/
+#site-footer .row.border-bottom.group { display: none; }
+#site-footer .copyright { display: none; }
+
+.article-container .article-content { border-right: 0; color: #878786 }
+
+.module-articletitle { display: none; }
+
+.featured-author-multi-container { display: block; }
+
+.addthis_toolbox { display: none; }
+
+.show-more-trigger { display: none; }
+.show-more { display: none; }
+.show-more-content { display: block; }
+
+#view-more-people,
+#view-more-people + a.lightbox-trigger{ display: none; }
+
+.subscribe { display: none; }

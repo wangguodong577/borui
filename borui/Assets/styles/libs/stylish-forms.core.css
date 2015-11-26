@@ -1,0 +1,73 @@
+/* 
+ * ---------------------------------------- *
+ * Name: 	Stylish Forms                   *
+ * Type: 	CSS                             *
+ * Version: v1.0.1                          *
+ * Author:	Matt O'Neill | Joseph Moore     *
+ * Status:	Development                     *
+ * ---------------------------------------- *
+ */
+
+
+.stylish-form { }
+
+/* general & generic */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+
+/* input
+ ------------------------ */
+.stylish-form .stylish-text, 
+.stylish-form .stylish-number,
+.stylish-form .stylish-email, 
+.stylish-form .stylish-password, 
+.stylish-form .stylish-textarea { position: relative; }
+.stylish-form .stylish-text > input, 
+.stylish-form .stylish-number > input,
+.stylish-form .stylish-email > input, 
+.stylish-form .stylish-password > input,
+.stylish-form .stylish-textarea > textarea { color: #555; background: none; border: none; outline: none; width: 100%; height: 34px; position: absolute; left: 0; top: 0; padding: 0px 10px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.stylish-form .stylish-textarea > textarea { height: 100%; resize: none !important; top: 0; padding: 10px; }
+.stylish-form .stylish-text > span,
+.stylish-form .stylish-number > span, 
+.stylish-form .stylish-email > span, 
+.stylish-form .stylish-password > span,
+.stylish-form .stylish-textarea > span { border: 1px solid #ccc; display: block; height: 30px; }
+.stylish-form .stylish-textarea > span { height: 100px; }
+
+/* date input
+ ------------------------ */
+.stylish-form .stylish-text > input.date,
+.stylish-form .stylish-number > input.date,
+.stylish-form .stylish-text > span.date,
+.stylish-form .stylish-number > span.date { width: 60px; margin-right: -2px; left: 0; padding: 0 10px; }
+
+/* dual states
+ ------------------------ */
+.stylish-form .stylish-ds { display: block; width: 20px; height: 20px; position: relative; float: left; }
+.stylish-form .stylish-ds > * { width: 100%; height: 100%; }
+.stylish-form .stylish-ds > span { position: absolute; }
+.stylish-form .stylish-ds > input[type="checkbox"],
+.stylish-form .stylish-ds > input[type="radio"] { cursor: pointer; margin: 0px; }
+
+/* checkbox
+ ------------------------ */
+.stylish-form .stylish-ds[data-type="checkbox"] > span { background: url(element-sprite.png) no-repeat; }
+.stylish-form .stylish-ds[data-type="checkbox"] > span.checked { background-position: -20px 0;}
+
+/* radio
+ ------------------------ */
+.stylish-form .stylish-ds[data-type="radio"] > span { background: url(element-sprite.png) -40px 0 no-repeat; }
+.stylish-form .stylish-ds[data-type="radio"] > span.checked { background-position: -60px 0;}
+
+/* select
+ ------------------------ */
+.stylish-form .stylish-select { border: 1px solid #ccc; position: relative; background: url(select-arrow.png) no-repeat right center #ffffff; }
+.stylish-form .stylish-select > select { display: none; }
+.stylish-form .stylish-select > span.selected { display: block; padding: 5px 30px 5px 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.stylish-form .stylish-select > ul { display: none; cursor: pointer; position: absolute; top: 106%; left: 0; z-index: 1; background: #fff;  border: 1px solid #ccc; list-style: none; padding: 0; margin: 0; width: 100%; }
+.stylish-form .stylish-select > ul.show-above { top: auto; bottom: 106%; }
+.stylish-form .stylish-select > ul li { background: #fff; padding: 5px 10px; }
+.stylish-form .stylish-select > ul li.disabled { color: #999; }
+.stylish-form .stylish-select > ul li.group span { display: block; cursor: default; font-weight: bold; font-style: italic; }
+.stylish-form .stylish-select > ul li.group ul { list-style: none; }
