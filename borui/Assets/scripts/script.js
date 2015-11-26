@@ -1483,10 +1483,6 @@
                 homePageIe8Helper();
             }
         }
-
-               
-        stylishForms.apply();
-
         if ($('.date-input').length) {
             $('.date-input').datepicker({
                 dateFormat: $('#hdnDatePickerFormat').val(),
@@ -1567,39 +1563,6 @@
         $('iframe[src*="youtube.com/embed"]').each(function () {
             $(this).wrap('<div class="responsive-embed-container"></div>');
         });
-
-
-        // has searched
-        // catches searched state and adjusts positioning of page accordingly
-        var formAction = $('form').attr('action');
-        if (formAction.indexOf('?') != -1) {
-            
-            // scroll to search component
-            setTimeout(function () {
-
-                // people search loaded
-                if ($('#search-simple-form').length) {
-                    window.scrollTo(0, $('#search-simple-form').position().top - 50);
-                }
-
-                // generic search loaded
-                if ($('#search-results-page').length) {
-                    window.scrollTo(0, $('.search-results-bar').position().top - 200);
-                }
-
-                // filter search loaded 
-                if ($('.search-filters').length) {
-                    window.scrollTo(0, $('.module-filter-bar').position().top - 200);
-                    if (checkQuery('exp', 0) === false) { // was not a pagination search
-                        $('.search-filters').show();
-                    }
-                    
-                }
-
-            }, 0);
-
-        }
-
 
         // tweet to
         if ($('.tweet-to').length) {
