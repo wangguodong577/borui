@@ -1,50 +1,22 @@
 ﻿(function ($) {
+    $(window).load(function() {
+        $('#slider').css({"height": $(window).height()});
+        $('#slider').nivoSlider({
+            effect: 'fold',                 // Specify sets like: 'fold,fade,sliceDown'
+            slices: 5,                     // For slice animations
+            animSpeed: 1000,                 // Slide transition speed
+            pauseTime: 4000,                 // How long each slide will show
+            directionNav: false,             // Next & Prev navigation
+            controlNav: false,                 // 1,2,3... navigation
+            pauseOnHover: true,             // Stop animation while hovering
+        });
 
-    function sizeImages() {
-        $('.image-ratio').each(function () {
-            var $img = $(this).find('img');
-            var imgWidth = $img.width(),
-                imgHeight = $img.height(),
-                winWidth = $(window).width(),
-                winHeight = $(window).height(),
-                widthRatio = winWidth / imgWidth,
-                heightRatio = winHeight / imgHeight,
-                widthDiff = heightRatio * imgWidth,
-                heightDiff = widthRatio * imgHeight;
-
-            $img.css({
-                width: (heightDiff > winHeight ? winWidth : widthDiff) + 'px'
+        $(".nivo-caption").each(function(){
+            $(this).css({
+                left: $(window).width()/20,
+                height: $(window).height()/4,
+                bottom: $(window).height()/2
             });
         });
-    }
-
-    $(document).ready(function () {
-        var height = $('.ch-carousel').height() * 2 / 3;
-        $('.image-ratio .vertical-centre').height(height);
     });
-    
-    $(window).load(function () {
-        sizeImages();
-        $(".ch-carousel").codehouseCarousel({
-            modes: {
-                slide: true,
-                infinite: true,
-                responsive: true,
-                nudge: false
-            },
-            rotate: {
-                auto: true,
-                direction: "right",
-                interval: 4000,
-                duration: 400,
-                type: 'quad'
-            },
-            dimensions: {
-                fixedHeight: true,
-                maxHeight: 1197,
-                baseWidth: 980
-            },
-
-        });
-    });
-}(jq110));
+}(jQuery));
